@@ -13,7 +13,7 @@ const logger = require("morgan");
 // https://www.npmjs.com/package/cookie-parser
 const cookieParser = require("cookie-parser");
 
-
+const FRONTEND_URL = process.env.ORIGIN || "https://lighthearted-salamander-481d20.netlify.app";
 
 // Middleware configuration
 module.exports = (app) => {
@@ -24,7 +24,7 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: "https://lighthearted-salamander-481d20.netlify.app",
+      origin: [FRONTEND_URL],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
       credentials: true,
