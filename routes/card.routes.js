@@ -6,7 +6,7 @@ const Card = require("../models/Card.model")
 // POST Route for creating a new card
 router.post("/cards/create", (req, res, next) => {
 const { title, release, description, image, video, genres, media, text } = req.body;
-if(media === "miscellanous") {
+if(media === "Miscellanous") {
     Card.create({ title, release, description, image, video, genres, media, text })
 .then(response => res.json(response))
 .catch(error => res.json(error));

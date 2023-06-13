@@ -13,7 +13,9 @@ const logger = require("morgan");
 // https://www.npmjs.com/package/cookie-parser
 const cookieParser = require("cookie-parser");
 
-const FRONTEND_URL = process.env.ORIGIN || "https://lighthearted-salamander-481d20.netlify.app";
+const FRONTEND_URL = process.env.ORIGIN || 
+"https://lighthearted-salamander-481d20.netlify.app";
+//"http://localhost:8000";
 
 // Middleware configuration
 module.exports = (app) => {
