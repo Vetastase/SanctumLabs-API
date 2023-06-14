@@ -26,7 +26,7 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      Origin: [FRONTEND_URL],
+      ORIGIN: [FRONTEND_URL],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
       credentials: true,
