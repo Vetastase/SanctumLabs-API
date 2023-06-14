@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 
 router.get("/", (req, res, next) => {
-    res.json("home page");
+    res.json("transition");
 });
 
 
